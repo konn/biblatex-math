@@ -7,8 +7,8 @@ This package provides a [BibLaTeX] (NOT BibTeX) citation styles for Mathematical
 
 It currently provides the following themes:
 
-* `math-numeric`, which uses numbers like [1], [2], [3] ... as a reference label.
-* `math-alphabetic`, which uses the part of author names such as [FMS] or [Coh].
+* `math-numeric`, which uses numbers like `[1]`, `[2]`, `[3]` ... as a reference label.
+* `math-alphabetic`, which uses the part of author names such as `[FMS88b]` or `[Coh74]`.
 
 In either case, we provide the following package options:
 
