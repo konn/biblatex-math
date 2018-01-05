@@ -3,7 +3,7 @@ BibLaTeX styles for Working Mathematicians
 
 What's This?
 ------------
-This package provides a BibLaTeX (NOT BibTeX) citation styles for Mathematical articles, which looks alike [`amsrefs`](https://ctan.org/pkg/amsrefs).
+This package provides a [BibLaTeX] (NOT BibTeX) citation styles for Mathematical articles, which looks alike [`amsrefs`](https://ctan.org/pkg/amsrefs).
 
 It currently provides the following themes:
 
@@ -30,3 +30,6 @@ Copy `./tex/latex/biblatex/{cbx,lbx,tbx}/*` to `$TEXMF` and run `mktexlsr`.
 LICENSE
 -------
 LaTeX's.
+
+
+[BibLaTeX]: https://ctan.org/pkg/biblatex
