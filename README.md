@@ -16,7 +16,7 @@ In either case, we provide the following package options:
 <dt><code>sentencedtitle</code> (default: <code>true</code>)</dt>
 <dd>
 Whether to make title alphabet sentence-style or not.
-If <code>true</code>, for example, <code>The Proof of Riemann Hypothesis</code> will be rendered as "The proof of riemann hypothesis". To prevent letters to be downcased, you can use braces: <code>The Proof of {Riemann} hypothesis</code> will result in <code>The proof of Riemann Hypothesis</code>.
+If <code>true</code>, for example, <code>The Proof of Riemann Hypothesis</code> will be rendered as "The proof of riemann hypothesis". To prevent letters to be downcased, you can use braces: <code>The Proof of {Riemann} Hypothesis</code> will result in <code>The proof of Riemann hypothesis</code>.
 You also have to embrace maths with <code>{</code> and <code>}</code>, as in <code>A short proof of {$1 + 1 \neq 2$}</code>, otherwise LaTeX halts with an error.
 </dd>
 <dt><code>dashed</code> (default: <code>true</code>)</dt>
