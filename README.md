@@ -25,7 +25,7 @@ You also have to embrace maths with <code>{</code> and <code>}</code>, as in <co
 
 Install
 -------
-Copy `./tex/latex/biblatex/{cbx,lbx,tbx}/*` to `$TEXMF` and run `mktexlsr`.
+Copy `./tex/latex/biblatex-math/*` to `$TEXMF` and run `mktexlsr`.
 
 LICENSE
 -------
