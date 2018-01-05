@@ -12,13 +12,16 @@ It currently provides the following themes:
 
 In either case, we provide the following package options:
 
-`sentencedtitle` (default: `true`)
-:    Whether to make title alphabet sentence-style or not.
+<dl>
+<dt>`sentencedtitle` (default: `true`)</dt>
+<dd>
+Whether to make title alphabet sentence-style or not.
 If `true`, for example, `The Proof of Riemann Hypothesis` will be rendered as "The proof of riemann hypothesis". To prevent letters to be downcased, you can use braces: `The Proof of {Riemann} Hypothesis` will result it `The proof of Riemann Hypothesis`.
 You also have to embrace maths with `{}` otherwise LaTeX halts with an error.
-
-`dashed` (default: `true`)
-:    Whether to omit the same author(s) by `_____`, as in `amsrefs`.
+</dd>
+<dt>`dashed` (default: `true`)</dt>
+<dd>Whether to omit the same author(s) by `_____`, as in `amsrefs`.</dd>
+</dl>
 
 Install
 -------
