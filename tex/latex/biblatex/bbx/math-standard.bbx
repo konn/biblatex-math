@@ -1,0 +1,57 @@
+\ProvidesFile{math-standard.bbx}[2016/02/10 biblatex bibliography style for mathematicians]
+\newtoggle{bbx:sentencetitle}
+
+\RequireBibliographyStyle{standard}
+\DeclareBibliographyOption[boolean]{dashed}[true]{%
+  \ifstrequal{#1}{true}
+    {\ExecuteBibliographyOptions{pagetracker}%
+     \renewbibmacro*{bbx:savehash}{\savefield{fullhash}{\bbx@lasthash}}}
+    {\renewbibmacro*{bbx:savehash}{}}}
+\DeclareBibliographyOption[boolean]{sentencedtitle}[true]{%
+  \settoggle{bbx:sentencetitle}{#1}}
+\ExecuteBibliographyOptions{sentencedtitle,dashed}
+\iftoggle{bbx:sentencetitle}{%
+  \DeclareFieldFormat{titlecase}{\MakeSentenceCase*{#1}}
+}{}
+
+\newbibmacro*{bbx:savehash}{%
+  \savefield{fullhash}{\bbx@lasthash}}
+
+\renewcommand*{\bibfont}{\footnotesize}
+\renewcommand*{\subtitlepunct}{\textup{\addcolon}\space}
+\renewcommand*{\newunitpunct}{\addcomma\space}
+\renewcommand*{\mkbibquote}[1]{\mkbibemph{#1}}
+\renewcommand*{\labelnamepunct}{\addcomma\space}
+\renewbibmacro*{in:}{}
+\renewbibmacro*{author}{%
+  \ifboolexpr{
+    test \ifuseauthor
+    and
+    not test {\ifnameundef{author}}
+  }
+  {\usebibmacro{bbx:dashcheck}
+    {\bibnamedash}
+    {\printnames{author}%
+      \setunit{\addcomma\space}%
+      \usebibmacro{bbx:savehash}}%
+    \usebibmacro{authorstrg}}
+  {\global\undef\bbx@lasthash}}
+
+\DeclareFieldFormat{journaltitle}{\textup{#1}}
+\DeclareFieldFormat{booktitle}{\textup{#1}}
+\DeclareFieldFormat[article]{number}{\mkbibbold{#1}}
+\DeclareFieldFormat[book]{number}{\mkbibbold{#1}}
+\DeclareFieldFormat
+  [article,inbook,incollection,inproceedings,patent,thesis,unpublished]
+  {title}{\mkbibemph{#1\isdot}}
+
+\newbibmacro*{bbx:dashcheck}[2]{%
+  \ifboolexpr{
+    test {\iffieldequals{fullhash}{\bbx@lasthash}}
+    and
+    not test \iffirstonpage
+  }
+  {#1}
+  {#2}}
+\renewcommand*{\bibnamedash}{\rule{3em}{0.4pt}\hspace*{.16667em}\addcomma\addspace}
+\endinput
